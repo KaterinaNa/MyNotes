@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewActivity">
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Title your nite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/editTextDescroption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="8dp"
+        android:ems="10"
+        android:hint="your note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="8dp"
+        android:entries="@array/dayOfWeek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescroption" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:background="#FF4900"
+        android:paddingHorizontal="15dp"
+        android:text="@string/preirity1"
+        app:layout_constraintStart_toStartOf="@+id/radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#FFD700"
+        android:text="@string/preirity2"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toTopOf="@+id/radioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#64AA2B"
+        android:text="@string/preority3"
+        android:paddingHorizontal="15dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintStart_toEndOf="@+id/radioButton2"
+        app:layout_constraintTop_toTopOf="@+id/radioButton2" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonAddNewNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:onClick="addNewNote"
+        android:text="@string/save_note"
+        app:layout_constraintStart_toStartOf="@+id/radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MyNotes</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="dayofweek">DayOfWeek</string>
+    <string name="preority">Preority</string>
+    <string name="preirity1">1</string>
+    <string name="preirity2">2</string>
+    <string name="preority3">3</string>
+    <string name="save_note">Save note</string>
+    <string name="fieldIsEmpty">Fields is empty</string>
+
+    <array name="dayOfWeek">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </array>
+</resources>
